@@ -1,0 +1,18 @@
+.nav {
+  // display: flex;
+
+
+}
+
+.nav__list {
+  display: flex;
+  gap: 28px;
+  margin-left: auto;
+}
+
+.nav__item {
+
+  &--current {
+    color: $main-active-color;
+  }
+}
