@@ -4,6 +4,8 @@
 
 .favorites__paragraph {
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 60px;
 }
 
 .br {
@@ -13,5 +15,27 @@
 @media screen and (max-width: 767px) {
   .br {
     display: initial;
+  }
+}
+
+.favorites__items {
+  display: flex;
+  justify-content: center;
+}
+
+.favorites-picture {
+  padding: 18px;
+  margin: 0 20 20 20;
+  border: 11px solid #FFE550;
+  border-radius: 50%;
+  width: 223.29px;
+  overflow: hidden;
+
+  &:last-child {
+    margin-bottom: 60px;
+  }
+
+  &:hover {
+    border-color: $main-active-color;
   }
 }
