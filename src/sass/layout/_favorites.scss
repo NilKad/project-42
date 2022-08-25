@@ -1,0 +1,17 @@
+.favorites__name {
+  text-align: center;
+}
+
+.favorites__paragraph {
+  text-align: center;
+}
+
+.br {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .br {
+    display: initial;
+  }
+}
