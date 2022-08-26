@@ -4,7 +4,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   background-color: $main-background-color;
-  // overflow: hidden;
+  overflow: hidden;
 
   @media screen and (max-width:767px) {
     font-size: 14px;
@@ -12,9 +12,9 @@ body {
   }
 }
 
-body.modal-open {
-  overflow: hidden;
-}
+// body.modal-open {
+//   overflow: hidden;
+// }
 
 body.menu-open {
   @media screen and (max-width: 767px) {
