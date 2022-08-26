@@ -2,7 +2,7 @@
   // display: flex;
   line-height: 1.17;
   color: $second-text-color;
-  font-size: 16px;
+  font-size: 14px;
 
   @media screen and (max-width: 767px) {
     font-size: 16px;
@@ -13,10 +13,12 @@
   display: flex;
   gap: 28px;
   margin-left: auto;
+  @media screen and (max-width: 767.5px) {
+    flex-direction: column;
+  }
 }
 
 .nav__item {
-
   &--current {
     color: $main-active-color;
   }

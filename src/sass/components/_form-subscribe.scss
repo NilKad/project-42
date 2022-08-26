@@ -1,0 +1,35 @@
+.form-subscribe {
+  margin-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 12px;
+    display: flex;
+  }
+}
+
+.form-subscribe__input {
+  width: 100%;
+  height: 42px;
+  border: 1px solid #ffe550;
+  border-radius: 30px;
+  @media screen and (max-width: 767.5px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 279px;
+  }
+}
+
+.form-subscribe__btn {
+  display: block;
+  margin-left: auto;
+  border: 1px solid #7eb101;
+  background-color: #fefefe;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  @media screen and (min-width: 768px) {
+    margin-left: 14px;
+  }
+}
