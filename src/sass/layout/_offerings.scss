@@ -1,1 +1,31 @@
-.offerings {}
+.offerings {
+  max-width: 320px;
+  background-image: url(../images/offerings-bg-mobile-1x.png);
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/offerings-bg-tablet-1x.png);
+  }
+}
+
+.offerings-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  color: #2c2c2c;
+}
+
+.offerings-text {
+  margin-top: 28px;
+  margin-bottom: 28px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  color: #2c2c2c;
+}
