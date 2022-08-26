@@ -13,7 +13,7 @@
   gap: 28px;
   margin-left: auto;
 
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     flex-direction: column;
     gap: unset;
     // padding: 16px;
@@ -21,7 +21,8 @@
 }
 
 .nav__item {
-  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 768px) {
+  }
 }
 
 .nav__link {
@@ -52,6 +53,4 @@
       background-color: $main-active-color;
     }
   }
-
-
 }
