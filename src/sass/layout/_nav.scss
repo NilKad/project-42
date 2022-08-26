@@ -36,22 +36,25 @@
 }
 
 .nav__item {
-
-
-
-  @media screen and (min-width: 768px) {
-
-    &--current {
-      color: $main-active-color;
-    }
-  }
-
-
+  @media screen and (min-width: 768px) {}
 }
 
 .nav__link {
   padding-top: 27px;
   padding-bottom: 27px;
+
+  transition: color $animations, background-color $animations;
+
+  &:hover,
+  &:focus {
+    color: $main-active-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    .nav__item--current & {
+      color: $main-active-color;
+    }
+  }
 
   @media screen and (max-width: 767px) {
     // padding: 0;
@@ -63,7 +66,7 @@
     &:active {
       background-color: $main-active-color;
     }
-
-    ;
   }
+
+
 }

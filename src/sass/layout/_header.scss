@@ -23,16 +23,27 @@
 
   // width: 100%;
   @media screen and (max-width: 767px) {
-    display: none;
+    opacity: 0;
+    // position: absolute;
+    // display: none;
+    // transform: translate(200%, -150%);
+    transform: translatex(100%);
+
+    // transition: transform 1000ms linear, opacity 1000ms linear;
+    transition: transform $animations, opacity $animations;
   }
 }
 
 .header__nav.is-open {
   display: block;
+  opacity: 1;
+  // transform: translate(0, 0);
+  transform: translateX(0);
 }
 
 .header__button {
   margin-left: 28px;
+
 
   @media screen and (max-width: 767px) {
     display: none;
