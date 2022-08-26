@@ -1,11 +1,62 @@
-@mixin button($sections, $fill: "no-fill") {
+@mixin button($from: "main", $fiil: "no-fill") {
   // base styles
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
+  min-width: 100px;
+  height: 32px;
+  padding: 5px;
+  // padding: 6px 17px 5px 16px;
+
   font-size: 14px;
   line-height: 150%;
   border-radius: 30px;
+  color: $main-text-color;
+  border: 2px solid $main-color;
+  background-color: $background-color;
+  outline: none;
+  transition: background-color $animations, border-color $animations;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    border-color: $third-active-color;
+
+  }
+
+  @if($from =="hero") {
+    min-width: 98px;
+  }
+
+  @if($from =="offerings") {
+    min-width: 106px;
+    height: 40px;
+
+    // @media screen and (min-width: 1200px) {
+    //   min-width: 150px;
+    // }
+  }
+
+  @if($fiil =="fill") {
+    background-color: $main-active-color;
+    border-color: $main-active-color;
+
+    &:hover,
+    &:focus {
+      background-color: $second-active-color;
+      border-color: $second-active-color;
+    }
+
+
+  }
+
+  @if($from =="subscribe") {
+    min-width: 103px;
+    height: 42px;
+    border-width: 1px;
+
+    &:hover,
+    &:focus {
+      background-color: $second-background-color;
+    }
+  }
 
   // $filling =(if) @if()
 }

@@ -49,3 +49,7 @@
     display: none;
   }
 }
+
+.header__button {
+  @include button("header", "fill");
+}
