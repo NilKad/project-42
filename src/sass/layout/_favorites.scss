@@ -9,9 +9,12 @@
 
 .favorites__list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 20px;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .favorites__items {
@@ -22,5 +25,11 @@
 
   &:hover {
     border-color: $main-active-color;
+  }
+}
+
+.favorites__items--hide {
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 }
