@@ -1,40 +1,24 @@
-.favorites__name {
+.favorites__conteiner {
   text-align: center;
 }
 
-.favorites__paragraph {
-  text-align: center;
-  margin-top: 20px;
+.favorites__text {
   margin-bottom: 60px;
-}
-
-.br {
-  display: none;
-}
-
-@media screen and (max-width: 767px) {
-  .br {
-    display: initial;
-  }
+  margin-top: 20px;
 }
 
 .favorites__list {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 
 .favorites__items {
   padding: 18px;
-  margin: 0px 0px 20px 0px;
   border: 11px solid #FFE550;
   border-radius: 50%;
-  width: 223.29px;
   overflow: hidden;
-
-  &:last-child {
-    margin-bottom: 60px;
-  }
 
   &:hover {
     border-color: $main-active-color;
