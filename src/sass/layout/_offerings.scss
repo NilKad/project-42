@@ -4,7 +4,6 @@
 
 .offerings {
   max-width: 1280px;
-  height: 1050px;
   background-repeat: no-repeat;
   background-size: 100%;
   margin-left: auto;
@@ -35,15 +34,18 @@
   }
 }
 
-.offerings__pictures {
+.offerings__wrap {
   display: flex;
   justify-content: center;
   padding-top: 41px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 150px;
+  }
 }
 
 .offerings__content {
   padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 .offerings__title {
@@ -61,41 +63,18 @@
   font-size: 14px;
   line-height: 1.14;
   color: #2c2c2c;
-}
 
-.options__title {
-  margin-bottom: 16px;
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.17;
-  color: #2c2c2c;
-}
-
-.options__text {
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.14;
-  color: #2c2c2c;
+  @media screen and (min-width: 768px) {
+    margin-top: 20px;
+  }
 }
 
 .offerings__info {
-  margin-left: 24px;
   font-family: inherit;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
   color: #000000;
-}
-
-.offerings__pics--hidden {
-  display: none;
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    display: flex;
-  }
 }
 
 .offerings__bottom {
@@ -110,27 +89,61 @@
   font-weight: 500;
   font-size: 13px;
   line-height: 1.5;
+}
 
-  //   :hover,
-  //   :focus {
-  //     border: #597d00;
-  //   }
+.options__list {
+  margin-top: 28px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    gap: 116px;
+  }
+}
+
+.options__title {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  color: #2c2c2c;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.options__text {
+  width: 252px;
+  height: 48px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  color: #2c2c2c;
+  margin-bottom: 28px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.info__wrap {
+  width: 83px;
+  height: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 24px;
 }
 
 .options__wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 28px;
-  margin-bottom: 8px;
+
   width: 48px;
   height: 48px;
   border-radius: 50%;
   background-color: #fff;
-
-  //   &:hover,
-  //   &:focus {
-  //     background-color: #2196f3;
-  //     color: var(--second-soc-color);
-  //   }
 }
