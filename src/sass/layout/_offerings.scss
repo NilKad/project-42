@@ -24,13 +24,20 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     background-image: url(../images/offerings/offerings-bg-desktop-1x.png);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url(../images/offerings/offerings-bg-desktop-2x.png);
     }
+  }
+}
+
+.container__cover {
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    gap: 90px;
   }
 }
 
@@ -42,10 +49,18 @@
   @media screen and (min-width: 768px) {
     padding-top: 150px;
   }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 177px;
+  }
 }
 
 .offerings__content {
   padding-top: 60px;
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 260px;
+  }
 }
 
 .offerings__title {
@@ -54,6 +69,15 @@
   font-size: 28px;
   line-height: 1.18;
   color: #2c2c2c;
+
+  @media screen and (min-width: 768px) {
+    font-size: 42px;
+    line-height: 1.17;
+  }
+
+  @media screen and (min-width: 1280px) {
+    line-height: 1.2;
+  }
 }
 
 .offerings__text {
@@ -65,7 +89,14 @@
   color: #2c2c2c;
 
   @media screen and (min-width: 768px) {
+    width: 500px;
     margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.19;
+  }
+
+  @media screen and (min-width: 1280px) {
+    line-height: 1.5;
   }
 }
 
@@ -82,6 +113,10 @@
   align-items: center;
   flex-wrap: wrap;
   margin-top: 28px;
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 0;
+  }
 }
 
 .offerings__button {
@@ -100,6 +135,10 @@
     margin-bottom: 40px;
     gap: 116px;
   }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 32px;
+  }
 }
 
 .options__title {
@@ -110,14 +149,18 @@
   color: #2c2c2c;
   margin-top: 8px;
   margin-bottom: 16px;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
+    line-height: 1.4;
+  }
 }
 
 .options__text {
   width: 252px;
-  height: 48px;
   font-family: inherit;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.14;
   color: #2c2c2c;
   margin-bottom: 28px;
@@ -125,14 +168,17 @@
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
   }
+
+  @media screen and (min-width: 1280px) {
+    line-height: 1.5;
+  }
 }
 
 .info__wrap {
-  width: 83px;
   height: 34px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   margin-left: 24px;
 }
@@ -141,7 +187,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 48px;
   height: 48px;
   border-radius: 50%;
