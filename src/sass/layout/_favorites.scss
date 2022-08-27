@@ -33,6 +33,7 @@
   border-radius: 50%;
   overflow: hidden;
   gap: 20px;
+  transition: border-color $animations;
 
 
   &:hover {
@@ -57,4 +58,12 @@
     }
   }
 
+}
+
+.favorites__picture {
+  transition: transform $animations;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }
