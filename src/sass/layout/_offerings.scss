@@ -1,18 +1,31 @@
 .offerings {
-  max-width: 320px;
+  max-width: 1600px;
   background-image: url(../images/offerings-bg-mobile-1x.png);
   background-repeat: no-repeat;
+  background-size: 100%;
   margin-left: auto;
   margin-right: auto;
 
   @media screen and (min-width: 768px) {
     background-image: url(../images/offerings-bg-tablet-1x.png);
   }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(../images/offerings-bg-desktop-1x.png);
+  }
+}
+
+.offerings-pics {
+  display: block;
+  justify-content: center;
+  padding-top: 41px;
+  padding-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .offerings-title {
-  font-family: Roboto;
-  font-style: normal;
+  font-family: inherit;
   font-weight: 700;
   font-size: 28px;
   line-height: 1.18;
@@ -21,8 +34,26 @@
 
 .offerings-text {
   margin-top: 28px;
-  margin-bottom: 28px;
-  font-family: Roboto;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  color: #2c2c2c;
+}
+
+.options-title {
+  margin-top: 84px;
+  margin-bottom: 16px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  color: #2c2c2c;
+}
+
+.options-text {
+  font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
