@@ -11,12 +11,13 @@
   @media screen and (min-width: 1200px) {
     margin-bottom: 80px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
 .footer__wrap {
   display: flex;
+  align-items: flex-start;
   gap: 82px;
   @media screen and (max-width: 1199px) {
     margin-bottom: 40px;
@@ -34,6 +35,10 @@
   @media screen and (max-width: 767.5px) {
     gap: 20px;
   }
+}
+
+.footer-nav__link {
+  padding: 0;
 }
 
 .footer-subscribe {
