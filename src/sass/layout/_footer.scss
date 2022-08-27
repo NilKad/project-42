@@ -1,5 +1,29 @@
 .footer {
   box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
+
+  background-image: url('../images/footer/bottom-mob.png'),
+    url('../images/footer/apple-mob.png'),
+    url('../images/footer/orange-mob.png');
+  background-position: center bottom, left 26%, right top;
+  background-size: 253px 66px, 110px 116px, 104px 259px;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 768px) {
+    min-height: 506px;
+    background-image: url('../images/footer/bottom-tab.png'),
+      url('../images/footer/apple-tab.png'),
+      url('../images/footer/orange-tab.png'),
+      url('../images/footer/orange-bottom-tab.png');
+    background-position: center bottom, right bottom, right top, bottom left;
+    background-size: 785px 506px, 170px 69px, 203px 365px, 184px 62px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    min-height: 395px;
+    background-image: url('../images/footer/bg-desk.png');
+    background-position: center bottom;
+    background-size: 1211px 266px;
+  }
 }
 
 .footer__top {
