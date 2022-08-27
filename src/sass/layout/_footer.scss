@@ -8,7 +8,7 @@
   @media screen and (min-width: 768px) {
     margin-bottom: 100px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     margin-bottom: 80px;
     display: flex;
     align-items: flex-start;
@@ -19,14 +19,14 @@
   display: flex;
   align-items: flex-start;
   gap: 82px;
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1279px) {
     margin-bottom: 40px;
   }
   @media screen and (min-width: 768px) {
     align-items: center;
     gap: 114px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     gap: 145px;
   }
 }
