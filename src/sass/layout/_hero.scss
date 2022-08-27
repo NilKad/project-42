@@ -188,8 +188,7 @@
 
     transition: fill $animations;
     
-    .swiper-button-prev:hover &, .swiper-button-next:hover &,
-    .swiper-button-prev:focus &, .swiper-button-next:focus & {
+    .swiper-button-prev:hover &, .swiper-button-next:hover & {
         fill: $main-color;
     }
 
