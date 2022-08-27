@@ -1,4 +1,4 @@
-@mixin button($from: 'main', $fiil: 'no-fill') {
+@mixin button($from: 'main', $fill: 'no-fill') {
   // base styles
   min-width: 100px;
   height: 32px;
@@ -14,6 +14,7 @@
   outline: none;
   transition: background-color $animations, border-color $animations;
   text-align: center;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -33,7 +34,7 @@
     // }
   }
 
-  @if ($fiil == 'fill') {
+  @if ($fill == 'fill') {
     background-color: $main-active-color;
     border-color: $main-active-color;
 
