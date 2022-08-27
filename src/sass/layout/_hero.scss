@@ -5,29 +5,15 @@
     }
     @media screen and (min-width: 768px) {
         padding-top: 60px;
-        padding-bottom: 73px;
+        padding-bottom: 0;
     }
     @media screen and (min-width: 1280px) {
-        padding-top: 14px;
-        padding-bottom: 14px;
+        padding-top: 159px;
     }
 
 }
-
 .hero__container {
-    position: relative; 
-
-    @media screen and (min-width: 1280px) {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-
-.hero__additional-container {
-    @media screen and (min-width: 1280px) {
-        width: 502px;
-    }
+    position: relative;
 }
 
 .hero__title { 
@@ -41,15 +27,15 @@
     @media screen and (min-width: 768px) {
         margin-bottom: 44px;
 
+        width: 537px;
+
         font-size: 42px;
         line-height: 1.20;
-        }
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
-        width: 537px;
-    }
-        
+        } 
     @media screen and (min-width: 1280px) {
         margin-bottom: 28px;
+
+        width: 502px;
 
         font-size: 48px;
         }
@@ -67,34 +53,18 @@
     @media screen and (min-width: 768px) {
         margin-bottom: 40px;
 
+        width: 336px;
+
         font-size: 16px;
         line-height: 1.50;
     }
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
-        width: 336px;
+    @media screen and (min-width: 1280px) {
+        width: 502px;
     }
 }
 
 .hero__button {
-    padding: 6px 17px 5px 16px;
-
-    font-family: inherit;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.50;
-    
-    color: $main-text-color;
-    background-color: $main-active-color;
-    border: none;
-    border-radius: 30px;
-
-    cursor: pointer;
-
-    transition: background-color $animations;
-
-    &:hover, &:focus {
-        background-color: $second-active-color;
-    }
+    @include button("hero", "fill");
 
 }
 .swiper-container {
@@ -103,14 +73,16 @@
     }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         position: absolute;
-        top: 89px;
-        right: 0;
+        bottom: -73px;
+        right: 40px;
 
         width: 320px;
         height: 320px;
     }
     @media screen and (min-width: 1280px) {
-        position: relative;
+        position: absolute;
+        top: -145px;
+        right: 30px;
 
         width: 580px;
         height: 580px;
@@ -181,15 +153,25 @@
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translateY(-50%) translateX(-25%);
-
+    @media screen and (min-width: 768px) {
+        transform: translateY(-50%) translateX(-8px);
+    }
+    @media screen and (min-width: 1280px) {
+        transform: translateY(-50%) translateX(-14px);
+    }
 }
 
 .swiper-button-next {
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translateY(-50%) translateX(25%);
+
+    @media screen and (min-width: 768px) {
+        transform: translateY(-50%) translateX(8px);
+    }
+    @media screen and (min-width: 1280px) {
+        transform: translateY(-50%) translateX(14px);
+    }
 }
 .swiper-button-left,
 .swiper-button-right {
