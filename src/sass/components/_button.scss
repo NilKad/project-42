@@ -1,4 +1,4 @@
-@mixin button($from: "main", $fiil: "no-fill") {
+@mixin button($from: 'main', $fiil: 'no-fill') {
   // base styles
   min-width: 100px;
   height: 32px;
@@ -18,14 +18,13 @@
   &:hover,
   &:focus {
     border-color: $third-active-color;
-
   }
 
-  @if($from =="hero") {
+  @if ($from == 'hero') {
     min-width: 98px;
   }
 
-  @if($from =="offerings") {
+  @if ($from == 'offerings') {
     min-width: 106px;
     height: 40px;
 
@@ -34,7 +33,7 @@
     // }
   }
 
-  @if($fiil =="fill") {
+  @if ($fiil == 'fill') {
     background-color: $main-active-color;
     border-color: $main-active-color;
 
@@ -43,11 +42,9 @@
       background-color: $second-active-color;
       border-color: $second-active-color;
     }
-
-
   }
 
-  @if($from =="subscribe") {
+  @if ($from == 'subscribe') {
     min-width: 103px;
     height: 42px;
     border-width: 1px;
