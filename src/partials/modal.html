@@ -1,0 +1,112 @@
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button
+      type="button"
+      class="close-button"
+      aria-label="Close"
+      data-modal-close
+    >
+      <svg width="30" height="30">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+    <table class="order-form">
+      <caption class="order-form__heading">
+        Make your order now!
+      </caption>
+      <thead class="order-form__head">
+        <tr class="order-form__row">
+          <th class="order-form__header">Item</th>
+          <th class="order-form__header">Name</th>
+          <th class="order-form__header">Quantity</th>
+          <th class="order-form__header">Price</th>
+        </tr>
+      </thead>
+      <tbody class="order-form__body">
+        <tr class="order-form__row">
+          <td class="order-form__data order-form__data--picture">
+            <picture class="favorites__picture">
+              <source
+                srcset="
+                  ./images/favorites-img/pizza-desktop-x1.jpg 1x,
+                  ./images/favorites-img/pizza-desktop-x2.jpg 2x
+                "
+                media="(min-width: 1280px)"
+              />
+              <source
+                srcset="
+                  ./images/favorites-img/pizza-tablet-x1.jpg 1x,
+                  ./images/favorites-img/pizza-tablet-x2.jpg 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/favorites-img/pizza-mobile-x1.jpg 1x,
+                  ./images/favorites-img/pizza-mobile-x2.jpg 2x
+                "
+                media="(min-width: 480px)"
+              />
+              <img
+                src="./images/favorites-img/pizza-mobile-x1.jpg"
+                alt="Pizza"
+              />
+            </picture>
+          </td>
+          <td class="order-form__data orderr-form__name">Lorem ipsum</td>
+          <td class="order-form__data">1</td>
+          <td class="order-form__data order-form__price">$9.99</td>
+        </tr>
+        <tr>
+          <td class="order-form__data order-form__data--picture">
+            <picture class="favorites__picture">
+              <source
+                srcset="
+                  ./images/favorites-img/pasta-desktop-x1.jpg 1x,
+                  ./images/favorites-img/pasta-desktop-x2.jpg 2x
+                "
+                media="(min-width: 1280px)"
+              />
+              <source
+                srcset="
+                  ./images/favorites-img/pasta-tablet-x1.jpg 1x,
+                  ./images/favorites-img/pasta-tablet-x2.jpg 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/favorites-img/pasta-mobile-x1.jpg 1x,
+                  ./images/favorites-img/pasta-mobile-x2.jpg 2x
+                "
+                media="(min-width: 480px)"
+              />
+              <img
+                src="./images/favorites-img/pasta-mobile-x1.jpg"
+                alt="Pasta"
+              />
+            </picture>
+          </td>
+          <td class="order-form__data orderr-form__name">Lorem ipsum</td>
+          <td class="order-form__data">1</td>
+          <td class="order-form__data order-form__price">$14.99</td>
+        </tr>
+      </tbody>
+      <tfoot class="order-form__foot">
+        <tr>
+          <td colspan="3" class="order-form__data order-form__footer">
+            Shipping
+          </td>
+          <td class="order-form__data order-form__shipping">Free shipping</td>
+        </tr>
+        <tr>
+          <td colspan="3" class="order-form__header order-form__footer">
+            Total
+          </td>
+          <td class="order-form__header order-form__price">$24.98</td>
+        </tr>
+      </tfoot>
+    </table>
+    <button type="submit" class="order-form__button">Place order</button>
+  </div>
+</div>
