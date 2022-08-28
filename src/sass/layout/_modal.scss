@@ -1,0 +1,188 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 1;
+
+    transition: opacity $animations, visibility $animations;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    &.is-hidden {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.modal {
+    background-image: url('../images/rectangle-tablet.png');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    opacity: 1;
+
+    text-align: center;    
+    padding: 40px 20px;
+
+    background-color: $main-background-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform $animations, opacity $animations;
+
+    .backdrop.is-hidden & {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    width: 550px;
+    height: 620px;
+
+    @media screen and (max-width: 767px) {
+        padding: 40px 10px;
+
+        width: 320px;
+        height: 500px;
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 38px;
+    height: 38px;
+
+    fill: rgb(92, 108, 117);
+    border: 2px solid $main-color;
+    background-color: transparent;
+    border-radius: 50%;
+
+    cursor: pointer;
+    transition: fill $animations, border-color $animations;
+
+    &:hover, &:focus {
+        fill: $main-text-color;
+        border-color: $third-active-color;
+    }
+
+    @media screen and (max-width: 767px) {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.order-form {
+    width: 510px;
+
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 767px) {
+        width: 300px;
+    }
+}
+
+.order-form__heading {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.20;
+
+    text-align: center;
+    
+    color: $main-text-color;
+
+    @media screen and (max-width: 767px) {
+        font-size: 26px;
+
+    }
+}
+
+.order-form__header {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.20;
+    
+    text-align: center;
+
+    padding: 10px;
+    
+    color: $main-text-color;
+
+    @media screen and (max-width: 767px) {
+        font-size: 16px;
+
+        padding: 8px;
+    }
+}
+
+.order-form__data {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.20;
+    
+    text-align: center;
+
+    padding: 10px;
+    
+    color: $main-text-color;
+
+    @media screen and (max-width: 767px) {
+        font-size: 16px;
+
+        padding: 8px;
+    }
+}
+
+.order-form__data--picture {
+    width: 130px;
+    height: 130px;
+    background-color: #ffffff;
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    @media screen and (max-width: 767px) {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.order-form__footer {
+    text-align: left;
+}
+
+.order-form__price, .order-form__shipping, .order-form__name {
+    text-align: right;
+
+}
+
+.order-form__button {
+    @include button("hero", "fill");
+
+    width: 200px;
+    height: 50px;
+
+    font-weight: 700;
+    font-size: 20px;
+
+    @media screen and (max-width: 767px) {
+        width: 150px;
+        height: 40px;
+
+        font-size: 16px;
+    }
+
+}
