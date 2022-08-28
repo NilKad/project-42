@@ -36,12 +36,13 @@
 
   @if ($fill == 'fill') {
     background-color: $main-active-color;
-    border-color: $main-active-color;
+    // border-color: $main-active-color;
+    border: none;
 
     &:hover,
     &:focus {
       background-color: $second-active-color;
-      border-color: $second-active-color;
+      // border-color: $second-active-color;
     }
   }
 
