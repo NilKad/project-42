@@ -16,6 +16,7 @@
   }
 
   @media screen and (min-width: 768px) {
+    margin-top: -32px;
     background-image: url(../images/offerings/offerings-bg-tablet-1x.png);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -25,6 +26,7 @@
   }
 
   @media screen and (min-width: 1280px) {
+    margin-top: 0;
     background-image: url(../images/offerings/offerings-bg-desktop-1x.png);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -68,7 +70,7 @@
   font-weight: 700;
   font-size: 28px;
   line-height: 1.18;
-  color: #2c2c2c;
+  color: var(--main-text-color);
 
   @media screen and (min-width: 768px) {
     font-size: 42px;
@@ -86,7 +88,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
-  color: #2c2c2c;
+  color: var(--main-text-color);
 
   @media screen and (min-width: 768px) {
     width: 500px;
@@ -105,7 +107,7 @@
   font-weight: 400;
   font-size: 13px;
   line-height: 1.5;
-  color: #000000;
+  color: var(--second-text-color);
 }
 
 .offerings__bottom {
@@ -146,7 +148,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 1.17;
-  color: #2c2c2c;
+  color: var(--main-text-color);
   margin-top: 8px;
   margin-bottom: 16px;
 
@@ -157,12 +159,12 @@
 }
 
 .options__text {
-  width: 252px;
+  // width: 252px;
   font-family: inherit;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
-  color: #2c2c2c;
+  color: var(--main-text-color);
   margin-bottom: 28px;
 
   @media screen and (min-width: 768px) {
@@ -170,7 +172,7 @@
   }
 
   @media screen and (min-width: 1280px) {
-    width: 253px;
+    // width: 253px;
     line-height: 1.5;
   }
 }
