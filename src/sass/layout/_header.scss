@@ -14,6 +14,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  // overflow: hidden;
 }
 
 .header__nav {
@@ -23,6 +24,9 @@
 
   // width: 100%;
   @media screen and (max-width: 767px) {
+    z-index: 1;
+    display: block;
+    text-align: left;
     position: absolute;
 
     top: 50px;
@@ -34,27 +38,19 @@
     background-color: $main-background-color;
     box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
     border-radius: 30px 0px 30px 30px;
-    overflow: hidden;
+    // overflow: hidden;
 
-    // outline: 1px solid orange;
-    // display: none;
     opacity: 0;
-    // position: absolute;
-
-    // transform: translate(200%, -150%);
     transform: translateX(100%);
-    // display: none;
     transition: transform $animations, opacity $animations;
-    // transition: transform 1000ms linear, opacity 1000ms linear;
-    // transition: transform 1000ms linear, opacity 1000ms linear;
   }
 }
 
 .header__nav.is-open {
-  display: block;
+  // display: block;
   opacity: 1;
-  // transform: translate(0, 0);
   transform: translateX(0);
+  // z-index: 1;
 }
 
 .header__button {
