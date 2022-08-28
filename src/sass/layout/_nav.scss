@@ -21,19 +21,21 @@
 }
 
 .nav__item {
-  @media screen and (min-width: 768px) {
-  }
+  @media screen and (min-width: 768px) {}
 }
 
 .nav__link {
   padding-top: 27px;
   padding-bottom: 27px;
+  ;
 
   transition: color $animations, background-color $animations;
 
   &:hover,
   &:focus {
     color: $main-active-color;
+    text-decoration: underline;
+    font-weight: 500;
   }
 
   @media screen and (min-width: 768px) {
