@@ -2,35 +2,29 @@
     @media screen and (max-width: 767px) {
         padding-top: 60px;
         padding-bottom: 50px;
+
     }
     @media screen and (min-width: 768px) {
         padding-top: 60px;
         padding-bottom: 0;
+
     }
     @media screen and (min-width: 1280px) {
         padding-top: 159px;
+        padding-bottom: 0;
+
     }
 
-}
-.hero__container {
-    position: relative;
 }
 
 .hero__title { 
     margin-bottom: 28px;
-    
-    font-size: 28px;
-    line-height: 1.18;
-
-    color: $main-text-color;
- 
+     
     @media screen and (min-width: 768px) {
         margin-bottom: 44px;
 
         width: 537px;
 
-        font-size: 42px;
-        line-height: 1.20;
         } 
     @media screen and (min-width: 1280px) {
         margin-bottom: 28px;
@@ -44,19 +38,13 @@
 .hero__descr {
     margin-bottom: 28px;
     
-    font-size: 14px;
-    line-height: 1.50;
-    font-weight: 400;
-    
-    color: $main-text-color;
+    line-height: 1.50;    
 
     @media screen and (min-width: 768px) {
         margin-bottom: 40px;
 
         width: 336px;
 
-        font-size: 16px;
-        line-height: 1.50;
     }
     @media screen and (min-width: 1280px) {
         width: 502px;
@@ -74,7 +62,7 @@
     }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         position: absolute;
-        bottom: -73px;
+        top: 149px;
         right: 40px;
 
         width: 320px;
@@ -82,7 +70,7 @@
     }
     @media screen and (min-width: 1280px) {
         position: absolute;
-        top: -145px;
+        top: 14px;
         right: 30px;
 
         width: 580px;
@@ -92,7 +80,7 @@
 .swiper {
     background: $background-color;
 
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color $animations;
 
     @media screen and (min-width: 768px) {
 
@@ -112,90 +100,28 @@
     overflow: hidden;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @media screen and (min-width: 768px) {
-        width: 34px;
-        height: 28px;
-    }
-    @media screen and (min-width: 1280px) {
-        width: 48px;
-        height: 40px;
-    }
-
-    background: $background-color;
-
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
-    border-radius: 4px;
-
-    cursor: pointer;
-    
-    transition: box-shadow $animations, border-radius $animations;
-
-    &:hover, &:focus {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
-        border-radius: 8px;
-    }
-    &:active {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
-        border-radius: 8px;
-    }
-    &::after {
-        display: none;
-    }
-    margin-top: 0;
-}
-
 .swiper-button-prev {
-    position: absolute;
-    top: 50%;
+    @extend %swiper-button;
     left: 0;
-    @media screen and (min-width: 768px) {
-        transform: translateY(-50%) translateX(-8px);
-    }
-    @media screen and (min-width: 1280px) {
-        transform: translateY(-50%) translateX(-14px);
-    }
+
+    transform: translate(-30%, -50%);
+
 }
 
 .swiper-button-next {
-    position: absolute;
-    top: 50%;
+    @extend %swiper-button;
     right: 0;
 
-    @media screen and (min-width: 768px) {
-        transform: translateY(-50%) translateX(8px);
-    }
-    @media screen and (min-width: 1280px) {
-        transform: translateY(-50%) translateX(14px);
-    }
+    transform: translate(30%, -50%);
 }
-.swiper-button-left,
+
+.swiper-button-left {
+    @extend %swiper-button-icon;
+}
+
 .swiper-button-right {
-    fill: $main-text-color;
+    @extend %swiper-button-icon;
 
-    @media screen and (min-width: 768px) {
-        width: 11px;
-        height: 20px;
-    }
-    @media screen and (min-width: 1280px) {
-        width: 16px;
-        height: 29px;
-    }
-
-    transition: fill $animations;
-    
-    .swiper-button-prev:hover &, .swiper-button-next:hover & {
-        fill: $main-color;
-    }
-
-    .swiper-button-prev:active &,
-    .swiper-button-next:active & {
-        fill: $main-text-color;
-    }
+    transform: rotateY(180deg);
 }
 
