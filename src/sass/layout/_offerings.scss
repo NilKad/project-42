@@ -6,8 +6,6 @@
   max-width: 1280px;
   background-repeat: no-repeat;
   background-size: 100%;
-  margin-left: auto;
-  margin-right: auto;
   background-image: url(../images/offerings/offerings-bg-mobile-1x.png);
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -43,10 +41,12 @@
   }
 }
 
-.offerings__wrap {
-  display: flex;
-  justify-content: center;
-  padding-top: 41px;
+.offerings__thumb {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    padding-top: 41px;
+  }
 
   @media screen and (min-width: 768px) {
     padding-top: 150px;
@@ -61,6 +61,7 @@
   padding-top: 60px;
 
   @media screen and (min-width: 1280px) {
+    width: 573px;
     padding-top: 260px;
   }
 }
@@ -84,6 +85,7 @@
 
 .offerings__subject {
   margin-top: 28px;
+  margin-bottom: 28px;
   font-family: inherit;
   font-weight: 400;
   font-size: 14px;
@@ -93,6 +95,7 @@
   @media screen and (min-width: 768px) {
     width: 500px;
     margin-top: 20px;
+    margin-bottom: 40px;
     font-size: inherit;
     line-height: 1.19;
   }
@@ -114,7 +117,6 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 28px;
 
   @media screen and (min-width: 1280px) {
     margin-top: 0;
@@ -129,13 +131,23 @@
 }
 
 .offerings__list {
-  margin-top: 28px;
+  margin-right: 28px;
 
   @media screen and (min-width: 768px) {
     display: flex;
-    margin-top: 40px;
-    margin-bottom: 40px;
     gap: 116px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    gap: 67px;
+  }
+}
+
+.offerings__item {
+  margin-bottom: 28px;
+
+  @media screen and (min-width: 768px) {
+    width: 252px;
   }
 
   @media screen and (min-width: 1280px) {
@@ -144,6 +156,7 @@
 }
 
 .offerings__options {
+  display: inline-block;
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
@@ -159,20 +172,19 @@
 }
 
 .offerings__text {
-  width: 252px;
+  display: inline-block;
   font-family: inherit;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
   color: var(--main-text-color);
-  margin-bottom: 28px;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
+    width: 252px;
   }
 
   @media screen and (min-width: 1280px) {
-    // width: 253px;
     line-height: inherit;
   }
 }
@@ -185,6 +197,10 @@
   flex-wrap: wrap;
   align-items: center;
   margin-left: 24px;
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
 }
 
 .offerings__svg {
