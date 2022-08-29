@@ -19,14 +19,14 @@
 }
 
 .modal {
-    background-image: url('../images/rectangle-tablet.png');
+    background-image: url('../images/modal/rectangle-tablet.png');
     position: absolute;
     top: 50%;
     left: 50%;
 
     opacity: 1;
 
-    text-align: center;    
+    text-align: center;
     padding: 40px 20px;
 
     background-color: $main-background-color;
@@ -72,7 +72,8 @@
     cursor: pointer;
     transition: fill $animations, border-color $animations;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         fill: $main-text-color;
         border-color: $third-active-color;
     }
@@ -101,7 +102,7 @@
     line-height: 1.20;
 
     text-align: center;
-    
+
     color: $main-text-color;
 
     @media screen and (max-width: 767px) {
@@ -114,11 +115,11 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 1.20;
-    
+
     text-align: center;
 
     padding: 10px;
-    
+
     color: $main-text-color;
 
     @media screen and (max-width: 767px) {
@@ -132,11 +133,11 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 1.20;
-    
+
     text-align: center;
 
     padding: 10px;
-    
+
     color: $main-text-color;
 
     @media screen and (max-width: 767px) {
@@ -164,7 +165,9 @@
     text-align: left;
 }
 
-.order-form__price, .order-form__shipping, .order-form__name {
+.order-form__price,
+.order-form__shipping,
+.order-form__name {
     text-align: right;
 
 }
