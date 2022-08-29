@@ -1,4 +1,4 @@
-<footer class="footer section">
+<footer id="footer" class="footer section">
   <div class="footer__container container">
     <div class="footer__top">
       <div class="footer__wrap">
@@ -11,7 +11,7 @@
         <nav class="footer__nav footer-nav nav">
           <ul class="nav__list footer-nav__list">
             <li class="nav__item">
-              <a href="./index.html" class="nav__link">Home</a>
+              <a href="./index.html" class="nav__link footer-nav__link">Home</a>
             </li>
             <li class="nav__item">
               <a href="" class="nav__link footer-nav__link">About</a>
@@ -32,7 +32,21 @@
       <div class="footer__subscribe footer-subscribe">
         <b class="footer-subscribe__capture">Subscribe</b>
         <form class="footer-subscribe__form form-subscribe" action="">
-          <input class="form-subscribe__input" type="email" />
+          <div class="form-subscribe__wrap">
+            <input
+              class="form-subscribe__input"
+              type="email"
+              placeholder="Enter your email"
+            />
+            <div class="form-subscribe__warning warning">
+              <svg class="warning__icon" width="12" height="12">
+                <use href="./images/icons.svg#icon-warning"></use>
+              </svg>
+              <span class="warning-text"
+                >Not a valid email address (example@email.com)</span
+              >
+            </div>
+          </div>
           <button class="form-subscribe__btn" type="submit">Subscribe</button>
         </form>
         <p class="footer-subscribe__privacy">
