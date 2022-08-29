@@ -3,16 +3,17 @@
         padding-top: 60px;
         padding-bottom: 50px;
 
+        height: 369px;
     }
     @media screen and (min-width: 768px) {
         padding-top: 60px;
-        padding-bottom: 0;
 
+        height: 469px;
     }
     @media screen and (min-width: 1280px) {
         padding-top: 159px;
-        padding-bottom: 0;
 
+        height: 608px;    
     }
 
 }
@@ -57,11 +58,11 @@
 }
 .swiper-container {
     z-index: 0;
-    @media screen and (max-width: 767px) {
-        display: none;
-    }
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
-        position: absolute;
+    position: absolute;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: block;
         top: 149px;
         right: 40px;
 
@@ -69,7 +70,6 @@
         height: 320px;
     }
     @media screen and (min-width: 1280px) {
-        position: absolute;
         top: 14px;
         right: 30px;
 
