@@ -42,15 +42,15 @@
   @media screen and (max-width: 767px) {
     display: flex;
     justify-content: center;
-    padding-top: 41px;
+    margin-top: 41px;
   }
 
   @media screen and (min-width: 768px) {
-    padding-top: 150px;
+    margin-top: 150px;
   }
 
   @media screen and (min-width: 1280px) {
-    padding-top: 177px;
+    margin-top: 177px;
   }
 }
 
@@ -63,7 +63,7 @@
   }
 }
 
-.offerings__title {
+.section__title {
   font-family: inherit;
   font-weight: 700;
   font-size: 28px;
