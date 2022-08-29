@@ -1,0 +1,91 @@
+// body {
+//   font-family: Roboto, sans-serif;
+
+//   color: $main-text-color;
+// $main-text-color: #2c2c2c;
+
+//   font-size: 16px;
+//   line-height: 1.5;
+
+//   background-color: $main-background-color;
+// $main-background-color: #fefefe;
+
+//   @media screen and (max-width: 767px) {
+//     font-size: 14px;
+//     line-height: 1.17;
+//     overflow: hidden;
+//     overflow-y: visible;
+//   }
+// }
+
+// $main-text-color: #2c2c2c;
+// $second-text-color: #000000;
+// $main-active-color: #bbf330;
+// $second-active-color: #b5ff00;
+// $third-active-color: #597d00;
+// $main-color: #7eb101;
+// $main-background-color: #fefefe;
+// $second-background-color: #ffe550;
+// $background-color: #ffffff;
+// $warning-color: #ff705d;
+// $animations: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.subscribe {
+  position: relative;
+}
+
+.subscribe__offers {
+  @media screen and(min-width:1200px) {
+    max-width: 656px;
+  }
+}
+
+.subscribe__img {
+  position: absolute;
+  top: -39px;
+  left: 50%;
+  transform: translateX(-50%);
+  @media screen and(min-width:768px) {
+    top: -52px;
+    left: 59%;
+    transform: unset;
+  }
+
+  @media screen and(min-width:1280px) {
+    top: 14%;
+    left: 56%;
+  }
+}
+
+.subscribe__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.21;
+  margin-bottom: 20px;
+  @media screen and(min-width:768px) {
+    font-size: 42px;
+  }
+}
+
+.subsribe__descr {
+  font-size: 14px;
+  line-height: 1.07;
+  margin-bottom: 40px;
+  @media screen and(min-width:768px) {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+}
+
+.subscribe__input {
+  @media screen and(min-width:768px) {
+    width: 395px;
+  }
+}
+
+.subscribe__btn {
+  @include button('subscribe', 'fill');
+  @media screen and(min-width:1200px) {
+    margin-left: 32px;
+  }
+}
