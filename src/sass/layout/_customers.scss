@@ -47,7 +47,7 @@
 .feedback {
   &__item {
     width: 100%;
-    min-height: 228px;
+    min-height: 180px;
     max-height: 247px;
     padding: 8px;
     background-color: $background-color;
@@ -102,7 +102,6 @@
   }
   &__text {
     margin-top: 28px;
-    margin-bottom: 40px;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.17;
@@ -121,15 +120,15 @@
   }
   &__contact {
     display: inline-flex;
+    margin-top: 40px;
     align-items: center;
     min-width: 160px;
     height: 52px;
-    margin-top: auto;
     border-right: 1px solid $main-color;
-    margin-right: auto;
 
     @media screen and (min-width: 768px) {
       margin-top: auto;
+      margin-right: auto;
     }
   }
   &__contact-wrap {
