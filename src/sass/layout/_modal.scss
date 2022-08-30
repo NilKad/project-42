@@ -83,11 +83,11 @@
     line-height: 1.20;
 
     text-align: center;
-    
-    color: #2C2C2C;
 }
 
 .order-form__field {
+    position: relative;
+
     display: flex;
     flex-direction: column;
 
@@ -96,16 +96,61 @@
     &:last-child {
         margin-bottom: 32px;
     }
+
 }
 
 .order-form__label {
     margin-bottom: 2px;
 
-    font-weight: 500;
+    padding-left: 12px;
+
     font-size: 16px;
+    font-weight: 500;
+    line-height: 1.40;
+}
+
+.order-form__error {
+    visibility: hidden;
+
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+    
+    transform: translateY(100%);
+    
+    display: flex;
+    align-items: baseline;
+
+    .order-form__input:invalid ~ & {
+        visibility: visible;
+    }
+
+}
+
+.order-form__required {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+    
+    transform: translateY(100%);
+    
+    display: flex;
+    align-items: baseline;
+
+    &.required {
+        visibility: visible;
+    }
+
+}
+.error-text, .required-text {
+    margin-left: 4px;
+
+    font-weight: 500;
+    font-size: 13px;
     line-height: 1.40;
     
-    color: #2C2C2C;
+    color: #FF705D;
 }
 
 .order-form__input {
@@ -118,23 +163,51 @@
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
     border-radius: 30px;
 
-    .order-form__field:focus-within & {
+    line-height: 1.25;
+    color: $main-text-color;
+
+    outline: none;
+
+    &.valid {
         border-color: #7EB101;
-        outline: none;
     }
 
-    &::placeholder {
-        font-size: 16px;
-        line-height: 1.25;
-        
-        color: #C4C4C4;
+    &.invalid {
+        border-color: #FF705D;
+    }
+    
+    &:not(placeholder-shown):focus:valid {
+        border-color: #7eb101;
+    }
+    
+    &:not(placeholder-shown):invalid {
+        border-color: #ff705d;
     }
 }
 
-.send_button {
-    @include button('offerings');
+.send-button {   
+    margin: 0 auto;
+
+    min-width: 106px;
+    height: 40px;
 
     font-weight: 500;
     font-size: 13px;
-    line-height: inherit;
+    line-height: 1.50;
+        
+    color: #2C2C2C;
+    background-color: #FFFFFF;
+    
+    border: 2px solid #7EB101;
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    &.enabled {
+        background-color: #BBF330;
+    }
+
+    &.disabled {
+        border-color: #ff705d;
+    }
 }
