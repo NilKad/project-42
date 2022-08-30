@@ -1,15 +1,21 @@
 .footer {
   box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
+  width: unset;
+  padding-bottom: 0;
 
+}
+
+.footer__bg {
   background-image: url('../images/footer/bottom-mob.png'),
     url('../images/footer/apple-mob.png'),
     url('../images/footer/orange-mob.png');
   background-position: center bottom, left 26%, right top;
   background-size: 253px 66px, 110px 116px, 104px 259px;
   background-repeat: no-repeat;
+
   @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
     background-image: url('../images/footer/bottom-mob@2x.png'),
       url('../images/footer/apple-mob@2x.png'),
       url('../images/footer/orange-mob@2x.png');
@@ -23,9 +29,10 @@
       url('../images/footer/orange-bottom-tab.png');
     background-position: center bottom, right bottom, right top, bottom left;
     background-size: 785px 506px, 170px 69px, 203px 365px, 184px 62px;
+
     @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
       background-image: url('../images/footer/bottom-tab@2x.png'),
         url('../images/footer/apple-tab@2x.png'),
         url('../images/footer/orange-tab@2x.png'),
@@ -38,9 +45,10 @@
     background-image: url('../images/footer/bg-desk.png');
     background-position: center bottom;
     background-size: 1211px 266px;
+
     @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
       background-image: url('../images/footer/bg-desk@2x.png');
     }
   }
@@ -52,6 +60,7 @@
   @media screen and (min-width: 768px) {
     margin-bottom: 100px;
   }
+
   @media screen and (min-width: 1280px) {
     margin-bottom: 80px;
     display: flex;
@@ -73,10 +82,12 @@
     gap: 12px;
     align-items: center;
   }
+
   @media screen and (min-width: 768px) {
     align-items: center;
     gap: 114px;
   }
+
   @media screen and (min-width: 1280px) {
     gap: 145px;
   }
@@ -98,6 +109,7 @@
 
 .footer-subscribe {
   margin-left: auto;
+
   @media screen and (min-width: 480px) and (max-width: 767.5px) {
     max-width: 279px;
     margin: 0 auto;
