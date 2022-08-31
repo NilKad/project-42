@@ -128,7 +128,6 @@
 }
 
 .order-form__required {
-    visibility: hidden;
     position: absolute;
     bottom: 0;
     left: 12px;
@@ -137,10 +136,6 @@
     
     display: flex;
     align-items: baseline;
-
-    &.required {
-        visibility: visible;
-    }
 
 }
 .error-text, .required-text {
@@ -203,11 +198,11 @@
 
     cursor: pointer;
 
-    &.enabled {
+    &:enabled {
         background-color: #BBF330;
     }
 
-    &.disabled {
+    &:disabled {
         border-color: #ff705d;
     }
 }

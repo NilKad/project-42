@@ -10,7 +10,7 @@
         <use href="./images/icons.svg#icon-close"></use>
       </svg>
     </button>
-    <form class="order-form" name="form" autocomplete="off">
+    <form class="order-form" autocomplete="off" novalidate>
       <p class="order-form__title">Order Form</p>
       <div class="order-form__field">
         <label for="name" class="order-form__label">Name</label>
@@ -84,67 +84,7 @@
           <span class="error-text">Please enter a valid email address</span>
         </div>
       </div>
-      <button type="submit" name="submit-button" class="send-button">
-        Send
-      </button>
+      <button type="submit" class="send-button">Send</button>
     </form>
   </div>
 </div>
-
-<script>
-  const form = document.querySelector("form[name='form']");
-  const nameInput = document.querySelector("input[name='name']");
-  const emailInput = document.querySelector("input[name='email']");
-  const phoneInput = document.querySelector("input[name='phone']");
-  const submitBtn = document.querySelector("button[name='submit-button']");
-
-  nameInput.isValid = () => !!nameInput.value;
-  emailInput.isValid = () => isValidEmail(emailInput.value);
-  phoneInput.isValid = () => isValidPhone(phoneInput.value);
-
-  const inputFields = [nameInput, emailInput, phoneInput];
-
-  const isValidEmail = email => {
-    const re =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-  };
-
-  const isValidPhone = phone => {
-    const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
-    return re.test(String(phone).toLowerCase());
-  };
-
-  let shouldValidate = false;
-  let isFormValid = false;
-
-  const validateInputs = () => {
-    if (!shouldValidate) return;
-
-    isFormValid = true;
-    inputFields.forEach(input => {
-      input.classList.add('valid');
-      input.nextElementSibling.classList.remove('required');
-      submitBtn.classList.add('enabled');
-
-      if (!input.isValid()) {
-        input.classList.add('invalid');
-        isFormValid = false;
-        input.nextElementSibling.classList.add('required');
-        submitBtn.classList.remove('enabled');
-        submitBtn.classList.add('disabled');
-      }
-    });
-  };
-
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    shouldValidate = true;
-    validateInputs();
-    if (isFormValid) {
-      // TODO: DO AJAX REQUEST
-    }
-  });
-
-  inputFields.forEach(input => input.addEventListener('input', validateInputs));
-</script>
