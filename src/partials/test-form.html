@@ -1,7 +1,7 @@
 <section class="section">
   <form class="test-form form-subscribe" action="">
     <!-- <div class="form-subscribe__wrap"> -->
-    <input class="form-subscribe__input" type="text" minlength="3" maxlength="25" required placeholder="Your name" />
+    <input class="form-subscribe__input " type="text" minlength="3" maxlength="25" required placeholder="Your name" />
     <div class="form-subscribe__warning warning">
       <svg class="warning__icon" width="12" height="12">
         <use href="./images/icons.svg#icon-warning"></use>
@@ -10,7 +10,8 @@
     </div>
     <!-- </div> -->
     <!-- <div class="form-subscribe__wrap"> -->
-    <input class="form-subscribe__input" type="phone" placeholder="+38(0_ _) _ _ _   _ _   _ _" />
+    <input class="form-subscribe__input" type="phone" placeholder="050 111 22 33" title="050 111 22 33"
+      pattern="\d{3}[\s]\d{3}[\s]\d{2}[\s]\d{2}" value="0" required />
     <div class="form-subscribe__warning warning">
       <svg class="warning__icon" width="12" height="12">
         <use href="./images/icons.svg#icon-warning"></use>

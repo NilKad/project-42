@@ -93,14 +93,33 @@
 //   border: 2px solid $main-color;
 // }
 
+// .form-subscribe__btn--modal {
+//   border-width: 2px;
+// }
+
+
+
+.form-subscribe__input:required:placeholder-shown:invalid {
+  border-color: $main-color;
+}
+
+.form-subscribe__input:not(:placeholder-shown):invalid {
+  border-color: $warning-color;
+}
+
+.form-subscribe__input:placeholder-shown:invalid~.form-subscribe__btn--modal {
+  border-color: $main-color;
+}
+
+.form-subscribe__input:valid~.form-subscribe__btn--modal {
+  background-color: $main-active-color;
+  border: 2px solid $main-color;
+}
+
 .form-subscribe__input:invalid~.form-subscribe__btn--modal {
-  @if 1>2 {
-    background-color: green;
-  }
+  border-color: #ff705d;
+}
 
-  @else {
-    background-color: red;
-  }
-
-  // background-color: red;
+.form-subscribe__input:invalid~.form-subscribe__btn--modal {
+  background-color: $background-color;
 }
