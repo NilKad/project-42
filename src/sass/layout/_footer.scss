@@ -100,12 +100,16 @@
   }
 
   @media screen and (max-width: 767.5px) {
-    gap: 20px;
+    // gap: 20px;
   }
 }
 
 .footer-nav__link {
-  padding: 0;
+  // padding: 0;
+}
+
+.footer-nev__link.nav__link {
+  padding: 10px;
 }
 
 .footer-subscribe {
