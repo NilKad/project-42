@@ -139,10 +139,13 @@
   border-color: $main-color;
 }
 
+//Если поле invalid, то кнопка border красный
 .form-subscribe__input:invalid~.form-subscribe__btn--modal {
-  border-color: #ff705d;
+  border-color: $warning-color;
 }
 
+//Это специально в конце, чтобы кнопку сделать белой, если остались еще поля invalid
+// если уже были были поля valid
 .form-subscribe__input:invalid~.form-subscribe__btn--modal {
   background-color: $background-color;
 }
